@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List - 小懒的待办事项</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-check-circle"></i> 小懒的待办事项</h1>
+            <p class="subtitle">专业且幽默的Todo List应用</p>
+        </header>
+
+        <div class="todo-app">
+            <div class="input-section">
+                <input type="text" id="todoInput" placeholder="添加新的待办事项..." autocomplete="off">
+                <button id="addBtn"><i class="fas fa-plus"></i> 添加</button>
+            </div>
+
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-label">总计:</span>
+                    <span id="totalCount" class="stat-value">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">已完成:</span>
+                    <span id="completedCount" class="stat-value">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">未完成:</span>
+                    <span id="pendingCount" class="stat-value">0</span>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <button class="filter-btn active" data-filter="all">全部</button>
+                <button class="filter-btn" data-filter="active">未完成</button>
+                <button class="filter-btn" data-filter="completed">已完成</button>
+            </div>
+
+            <ul id="todoList" class="todo-list">
+                <!-- Todos will be loaded here -->
+            </ul>
+
+            <div class="empty-state" id="emptyState">
+                <i class="fas fa-clipboard-list"></i>
+                <p>暂无待办事项</p>
+                <p class="empty-hint">添加你的第一个待办事项吧！</p>
+            </div>
+        </div>
+
+        <footer>
+            <p>由 <strong>小懒</strong> 为 Walker 创建 | 专业且幽默的个人助理</p>
+            <p class="footer-note">数据保存在内存中，刷新页面会重置</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
